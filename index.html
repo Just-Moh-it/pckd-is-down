@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uh oh! Pckd is down</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;800&display=swap");
+
+      body,
+      html {
+        width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        /* fill */
+        background: radial-gradient(91.4% 63.4%at 50%0, #e99ff2 0, #983bb0 100%)
+          no-repeat local;
+        font-family: "Be Vietnam Pro", sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body > .content {
+        max-width: 430px;
+
+        width: 100%;
+
+        margin: 80px 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .toDocs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: white;
+        width: max-content;
+        padding: 10px 20px;
+        border-radius: 1000px;
+        animation-delay: 0.4s;
+        animation: cardIn 0.5s ease-in-out;
+        font-weight: 400;
+        text-decoration: none;
+        color: #666;
+        z-index: 99;
+      }
+
+      .toDocs:hover {
+        box-shadow: 0 100px 140px -50px rgb(0 0 0 / 40%);
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 100px 140px -50px rgb(0 0 0 / 40%),
+          0 2px 174px 0 rgb(0 0 0 / 10%);
+        border-radius: 30px;
+        overflow: hidden;
+        perspective: 1200px;
+        transform-origin: bottom;
+        animation: cardIn 0.5s ease-in-out;
+      }
+
+      @keyframes cardIn {
+        0% {
+          transform: scale(0.9);
+          opacity: 0;
+          translate: 0, 1000px;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+          translate: 0, 0;
+        }
+      }
+
+      .card img.robot {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      .card .content {
+        font-size: 12px;
+        --framer-aspect-ratio-supported: auto;
+        box-sizing: border-box;
+        -webkit-font-smoothing: inherit;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255);
+        gap: 20px;
+        justify-content: center;
+        padding: 50px;
+      }
+
+      .card .content h1 {
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 37.2px;
+        font-size: 31px;
+      }
+
+      .card .content p {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 25.6px;
+        color: rgb(34, 34, 34);
+      }
+
+      .links {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        justify-content: flex-start;
+      }
+
+      .links a {
+        color: #666;
+        width: 40px;
+        height: 40px;
+        border-radius: 500px;
+        background-color: rgb(243, 243, 243);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .links a.github:hover {
+        color: white;
+        background-color: #0099ff;
+      }
+      .links a.docs:hover {
+        color: white;
+        background-color: #9000ff;
+      }
+      .links a.twitter:hover {
+        color: white;
+        background-color: #0099ff;
+      }
+
+      .links svg {
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+      }
+
+      @media (max-width: 430px) {
+        body {
+          display: flex;
+        }
+
+        .card {
+          margin: 0;
+          min-height: 100vh;
+          height: 100%;
+          background-color: white;
+          align-items: stretch;
+          border-radius: 0;
+          overflow: scroll;
+        }
+
+        .card img.robot {
+          height: 100%;
+          flex-grow: 1;
+          max-height: 600px;
+        }
+
+        .card .content {
+          flex-shrink: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="card">
+        <img
+          src="https://media.discordapp.net/attachments/1041550961866448976/1049245654553210920/BESTGMRSINCE2004_A_3D_white_linkURL_icon_on_a_purple_gradient_p_538034dd-029f-4a8c-ac86-0b43febbe177.png?width=395&height=395"
+          alt="Robot-sad"
+          class="robot"
+          title="Image credits: Midjourney AI"
+        />
+        <div class="content">
+          <h1>Uh Oh! Got an error</h1>
+          <p>
+            Pckd runs on a very slow server, and sometimes that server goes
+            down. This is one of those times. Apologies. Please check back
+            later.
+          </p>
+          <div class="links">
+            <a class="github" href="https://github.com/PckdHQ/Pckd">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path
+                  d="m213.7 82.3-56-56A8.1 8.1 0 0 0 152 24H56a16 16 0 0 0-16 16v176a16 16 0 0 0 16 16h144a16 16 0 0 0 16-16V88a8.1 8.1 0 0 0-2.3-5.7ZM152 88V44l44 44Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a class="docs" href="https://docs.pckd.me"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path
+                  d="M224 224a8 8 0 0 1-8 8 32.1 32.1 0 0 1-32-32v-8a16 16 0 0 0-16-16h-12v40a16 16 0 0 0 16 16 8 8 0 0 1 0 16 32.1 32.1 0 0 1-32-32v-40h-24v40a32.1 32.1 0 0 1-32 32 8 8 0 0 1 0-16 16 16 0 0 0 16-16v-40H88a16 16 0 0 0-16 16v8a32.1 32.1 0 0 1-32 32 8 8 0 0 1 0-16 16 16 0 0 0 16-16v-8a32.1 32.1 0 0 1 14.8-27A55.8 55.8 0 0 1 48 120v-8a58 58 0 0 1 7.7-28.3A59.9 59.9 0 0 1 61.1 36a7.8 7.8 0 0 1 6.9-4 59.7 59.7 0 0 1 48 24h24a59.7 59.7 0 0 1 48-24 7.8 7.8 0 0 1 6.9 4 59.9 59.9 0 0 1 5.4 47.7A58 58 0 0 1 208 112v8a55.8 55.8 0 0 1-22.8 45 32.1 32.1 0 0 1 14.8 27v8a16 16 0 0 0 16 16 8 8 0 0 1 8 8Z"
+                  fill="currentColor"
+                /></svg
+            ></a>
+            <a class="twitter" href="https://twitter.com/PckdHQ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M21.5 5.008a8.4 8.4 0 0 1-2.426 1.194 3.44 3.44 0 0 0-3.847-.972A3.496 3.496 0 0 0 13 8.542v.781a8.214 8.214 0 0 1-6.955-3.535s-3.09 7.022 3.864 10.143a8.923 8.923 0 0 1-5.409 1.56c6.955 3.901 15.455 0 15.455-8.972a3.62 3.62 0 0 0-.062-.648A6.038 6.038 0 0 0 21.5 5.008Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <a href="https://docs.pckd.me" class="toDocs">← Back to docs</a>
+    </div>
+  </body>
+</html>
