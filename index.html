@@ -178,8 +178,12 @@
           display: flex;
         }
 
-        .card {
+        body > .content {
           margin: 0;
+          gap: 0;
+        }
+
+        .card {
           min-height: 100vh;
           height: 100%;
           background-color: white;
@@ -196,6 +200,12 @@
 
         .card .content {
           flex-shrink: 0;
+        }
+
+        .toDocs {
+          width: 100%;
+          border-radius: 0;
+          padding-bottom: 40px
         }
       }
     </style>
